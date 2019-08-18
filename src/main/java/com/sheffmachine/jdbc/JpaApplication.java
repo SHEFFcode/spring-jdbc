@@ -32,8 +32,10 @@ public class JpaApplication implements CommandLineRunner {
                 "User 10001 is {}", personJpaRespository.findById(10001)
         );
 
+        personJpaRespository.delete(10002);
+
 //        logger.info(
-//                "Deleting 10002 is {}", personJpaRespository.deleteById(10002)
+//                "Deleting person", personJpaRespository.delete(10002)
 //        );
 
         logger.info(

@@ -27,4 +27,9 @@ public class PersonJpaRespository {
         return entityManager.merge(person);
     }
 
+    public void delete(int id) {
+        Person personFromDb = findById(id);
+        entityManager.remove(personFromDb);
+    }
+
 }
