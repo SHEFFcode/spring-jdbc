@@ -24,5 +24,9 @@ public class JdbcApplication implements CommandLineRunner {
         logger.info(
                 "All users -> {}", personJdbcDAO.findAll()
         );
+
+        logger.info(
+                "User 10001 is {}", personJdbcDAO.findById(10001)
+        );
     }
 }
