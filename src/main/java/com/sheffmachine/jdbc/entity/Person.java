@@ -1,9 +1,15 @@
 package com.sheffmachine.jdbc.entity;
 
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
+@Table(name = "person")
 public class Person {
+    @Id
+    @GeneratedValue
     private int id;
+    @Column(name = "name")
     private String name;
     private String location;
     private Date birth_date;
@@ -22,6 +28,14 @@ public class Person {
     }
 
     public Person(int id, String name, String location, Date birth_date) {
+        this.id = id;
+        this.name = name;
+        this.location = location;
+        this.birth_date = birth_date;
+    }
+
+
+    public Person(String name, String location, Date birth_date) {
         this.id = id;
         this.name = name;
         this.location = location;
